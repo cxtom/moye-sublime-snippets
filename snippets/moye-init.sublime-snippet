@@ -1,0 +1,51 @@
+<snippet>
+    <content><![CDATA[
+/**
+ * @file ${2:[file description]}
+ * @author ${3:yourname} <${4:youremail}>
+ */
+
+define(function (require) {
+    var moye  = require('moye');
+    var lib   = require('moye/lib');
+
+    var uiProperties = {
+        '${1:controlid}': {
+            type: 'TextBox',
+            id: '${1:controlid}'
+        }
+    };
+
+    var uiEvents = {
+        '${1:controlid}': {
+            change: function (e) {
+
+            }
+        }
+    };
+
+    return {
+        enter: function () {
+            moye.init(document.body, uiProperties);
+
+            lib.each(uiEvents, function (conf, id) {
+                var control = moye.get(id);
+                if (control) {
+                    lib.each(
+                        conf,
+                        function (handler, eventName) {
+                            this.on(eventName, handler);
+                        },
+                        control
+                    );
+                }
+            });
+        }
+    }
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>moye-init</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>
