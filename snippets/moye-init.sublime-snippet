@@ -48,4 +48,6 @@ define(function (require) {
     <tabTrigger>moye-init</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.js</scope>
+
+    <description>moye项目入口文件初始化代码段</description>
 </snippet>

@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+${1:lib}.each(uiEvents, function (conf, id) {
+    var control = moye.get(id);
+    if (control) {
+        ${1}.each(
+            conf,
+            function (handler, eventName) {
+                this.on(eventName, handler);
+            },
+            control
+        );
+    }
+});
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>moye-events-init</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+    <description>moye事件初始化代码段</description>
+</snippet>

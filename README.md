@@ -5,6 +5,7 @@
 
 将`snippets`中的文件复制到`{SublimePackage}/User`下
 
-## Actions
+## Actions + Tab键
 
-1. moye-init + Tab
+1. moye-init
+2. moye-events-init
