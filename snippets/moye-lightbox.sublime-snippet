@@ -1,0 +1,6 @@
+<snippet>
+    <content><div data-role="lightbox-image" data-lightbox-url="" data-lightbox-title="" data-lightbox-width="" data-lightbox-height=""></div></content>
+    <tabTrigger>lightbox:</tabTrigger>
+    <scope>source.tpl</scope>
+    <description>moye LightBox Triggers</description>
+</snippet>
